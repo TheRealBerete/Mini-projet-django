@@ -1,0 +1,31 @@
+POST http://localhost:8000/api/transactions/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "amount": -29.50,
+    "description": "Test de transdépence",
+    "text": "Test3"
+}
+
+###
+
+GET http://localhost:8000/api/transactions HTTP/1.1
+
+###
+PUT http://localhost:8000/api/transactions/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "amount": 1000.50,
+    "description": "Transactin modifiée",
+    "text": "Ceci est une transaction modifiée"
+}
+
+###
+
+PATCH  http://localhost:8000/api/transactions/c7b93201-dca1-4285-b537-b11de2ec686b/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "description": "Transaction patchée avec succès"
+}
